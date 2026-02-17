@@ -1,0 +1,21 @@
+<div class="card" (mouseenter)="onEnter()"(mouseleave)="onLeave()">
+  <img class="img" [src]="currentImage" />
+  <h3 class="name">{{ product.name }}</h3>
+  <p class="desc">{{ product.description }}</p>
+  <div class="meta">
+    <span class="price">{{ product.price }} ₸</span>
+    <span class="rating"> ⭐{{ product.rating }}</span>
+  </div>
+
+  <div class="actions">
+    <a class="btn" [href]="product.link" target="_blank" rel="noopener noreferrer">
+      Kaspi
+    </a>
+    <a class="btn" [href]="whatsappLink()" target="_blank" rel="noopener noreferrer">
+      WhatsApp
+    </a>
+    <a class="btn" [href]="telegramLink()" target="_blank" rel="noopener noreferrer">
+      Telegram
+    </a>
+  </div>
+</div>
