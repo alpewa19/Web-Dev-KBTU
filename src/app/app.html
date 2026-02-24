@@ -1,0 +1,44 @@
+<h1
+  style="
+    text-align: center;
+    margin: 40px 0 10px;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  "
+>
+  Online Store
+</h1>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h2 class="sidebar-title">Categories</h2>
+    <div class="category-list">
+      @for (category of categories; track category.id) {
+        <button
+          type="button"
+          class="category-btn"
+          [class.category-btn--active]="category.id === selectedCategoryId()"
+          (click)="selectCategory(category.id)"
+        >
+          {{ category.name }}
+        </button>
+      }
+    </div>
+  </aside>
+
+  <main class="content">
+    @if (selectedCategoryId() === null) {
+      <div class="placeholder">
+        <h2>Welcome to the Online Store</h2>
+        <p>Select a category to view products.</p>
+      </div>
+    } @else {
+      <app-product-list
+        [products]="filteredProducts()"
+        (productLiked)="onProductLiked($event)"
+        (productDeleted)="onProductDeleted($event)"
+      ></app-product-list>
+    }
+  </main>
+</div>
