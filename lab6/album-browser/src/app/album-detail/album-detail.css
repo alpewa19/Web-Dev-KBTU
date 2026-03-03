@@ -1,0 +1,20 @@
+.detail-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.detail-card p {
+  margin-bottom: 10px;
+}
+
+.detail-actions {
+  margin-top: 20px;
+}
+
+.detail-actions button {
+  margin: 10px;
+}

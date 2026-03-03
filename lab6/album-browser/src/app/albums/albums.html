@@ -1,0 +1,20 @@
+
+<div class="page-container">
+  <h2>Albums</h2>
+
+  <ng-container *ngIf="loading; else albumsList">
+    <p>Loading albums...</p>
+  </ng-container>
+
+  <ng-template #albumsList>
+    <div *ngFor="let album of albums" class="album-card">
+      <div [routerLink]="['/albums', album.id]">
+        <strong>{{ album.id }}</strong> - {{ album.title }}
+      </div>
+
+      <button (click)="deleteAlbum(album.id)">
+        Delete
+      </button>
+    </div>
+  </ng-template>
+</div>

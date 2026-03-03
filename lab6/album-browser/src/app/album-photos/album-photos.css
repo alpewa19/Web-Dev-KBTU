@@ -1,0 +1,32 @@
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.photo-card {
+  background: white;
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-5px);
+}
+
+.photo-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.photo-title {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.back-btn {
+  margin-top: 30px;
+}
